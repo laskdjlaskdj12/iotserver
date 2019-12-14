@@ -25,7 +25,7 @@ class PowerService {
     @Async
     fun powerOn() {
         relay.open()
-        Thread.sleep(500)
+        Thread.sleep(10000)
         relay.close()
     }
 
