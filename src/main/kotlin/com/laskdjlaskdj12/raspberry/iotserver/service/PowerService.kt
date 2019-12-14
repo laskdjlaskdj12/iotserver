@@ -28,4 +28,9 @@ class PowerService {
         Thread.sleep(500)
         relay.close()
     }
+
+    val status: Boolean
+        get() {
+            return relay.isOpen
+        }
 }

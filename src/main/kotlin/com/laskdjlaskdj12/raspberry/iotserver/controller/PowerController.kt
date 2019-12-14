@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RestController
 class PowerController(
         private val powerService: PowerService) {
 
+    @GetMapping("/status")
+    fun powerStatus(): Boolean {
+        return powerService.status
+    }
+
     @GetMapping("/on")
     fun powerOn(): ResponseEntity<String> {
         powerService.powerOn()
