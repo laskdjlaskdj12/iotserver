@@ -18,14 +18,14 @@ class PowerService {
     @Async
     fun powerOff() {
         relay.open()
-        Thread.sleep(3000)
+        Thread.sleep(7000)
         relay.close()
     }
 
     @Async
     fun powerOn() {
         relay.open()
-        Thread.sleep(10000)
+        Thread.sleep(500)
         relay.close()
     }
 
